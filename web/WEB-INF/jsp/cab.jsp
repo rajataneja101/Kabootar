@@ -42,20 +42,7 @@ body
 <body>
  
  
-<% 
-            Connection connection = DriverManager.getConnection(
-                "jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
 
-            Statement statement = connection.createStatement() ;
-            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers,users where cabdrivers.source=users.source") ; 
-            resultset1.next();
-            String s1=resultset1.getString(1);
-            out.print(s1);
-            ResultSet resultSet2 = statement.executeQuery("select destination from cabdrivers where CABID ='"+s1+"'");
-            resultSet2.next();
-            String s2=resultSet2.getString(1);
-            out.print(s2);
-            %>
 
         
     

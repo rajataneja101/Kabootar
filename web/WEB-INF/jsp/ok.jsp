@@ -45,18 +45,12 @@ try{
         e.printStackTrace();
         }
 
-%>
-
-
-<br />
-<br />
-<br />
-<%try{ 
+try{ 
             Connection connection = DriverManager.getConnection(
                 "jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
 
             Statement statement = connection.createStatement() ;
-            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers,users where cabdrivers.source=users.source") ; 
+            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers,users where cabdrivers.source='"+b+"'") ; 
             resultset1.next();
             String s1=resultset1.getString(1);
            
@@ -73,7 +67,7 @@ try{
             }
                   }catch(Exception e)
                   {
-                      out.print(e);
+                       out.println("NOT BOOKED");
                   }                             
             %>
             
