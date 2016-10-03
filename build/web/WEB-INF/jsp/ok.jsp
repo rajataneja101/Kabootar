@@ -5,6 +5,36 @@
 <html>
 <head>
 </head>
+<style>
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+      height:20%;
+    width:20%;
+    
+}
+body 
+{
+     
+    background-image: url("/WebApplication6/slider.jpg");
+     min-height: 500px;
+    
+    background-attachment: fixed;
+  
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+}
+</style>
 <body>
 
 
@@ -53,27 +83,24 @@ try{
             ResultSet resultSet4 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s3+"'");
             resultSet4.next();
             String s4=resultSet4.getString(1);
-            out.print(s1);
-            out.print(s2);
-            out.print(s3);
-            out.print(s4);
+           
             if(s2.equals(c))
                          {
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
                 statement.executeUpdate(q);
-               out.println( "<b><font size=5>"+"Cab Booked successfully "+"</font></b>");     
+               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");     
                        }
             else if(s4.equals(c))
                                {
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
                 statement.executeUpdate(q);
-               out.println( "<b><font size=5>"+"Cab Booked successfully "+"</font></b>");   
+               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");   
             }
                else 
                                {
-               out.println( "<b><font size=5>"+"Not booked "+"</font></b>");     
+               out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");     
             }
                   }catch(Exception e)
                   {
@@ -82,7 +109,8 @@ try{
             %>
             
 <form action="user">
-<input type="submit" value="Click Here to insert another record">
+    <button class="button" name="submit" id="button"  value="Submit" >AGAIN!</button>
+
 </form>
 
 

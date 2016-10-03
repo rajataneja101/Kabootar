@@ -3,7 +3,7 @@
 <head>
 <style>
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: #ff3300; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -17,7 +17,7 @@
     
 }
 
-.button2 {background-color: #008CBA;} /* Blue */
+.button2 {background-color: #000000;} /* Blue */
 body 
 {
      
@@ -40,8 +40,8 @@ body
 
 
 <button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%" onClick="window.location='/WebApplication6/cab';">Cab Driver</button> 
-<button class="button button2 " style="margin-left:auto;margin-right:auto;display:block;margin-top:2%;margin-bottom:0%" onClick="window.location='/WebApplication6/user';">User   </button>
-
+<button class="button button2" style="margin-left:auto;margin-right:auto;display:block;margin-top:2%;margin-bottom:0%" onClick="window.location='/WebApplication6/user';">User   </button>
+<button class="button " style="margin-left:auto;margin-right:auto;display:block;margin-top:2%;margin-bottom:0%" onClick="window.location='/WebApplication6/viewcab';">View Cabs</button> 
 
 </body>
 </html>

@@ -5,6 +5,36 @@
 <html>
 <head>
 </head>
+<style>
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+      height:20%;
+    width:20%;
+    
+}
+body 
+{
+     
+    background-image: url("/WebApplication6/slider.jpg");
+     min-height: 500px;
+    
+    background-attachment: fixed;
+  
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+}
+</style>
 <body>
 
 

@@ -28,9 +28,9 @@ public String posts(ModelMap map) {
         return "okcab";
 }
 
-@RequestMapping("/contact")
+@RequestMapping("/viewcab")
 public String contact(ModelMap map) {
-        return "contact";
+        return "viewcab";
 }
 
 
