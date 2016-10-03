@@ -29,21 +29,13 @@
 %>
 
 <%
-try{
+
          Class.forName("oracle.jdbc.driver.OracleDriver");
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
            Statement st=con.createStatement();
            
-                String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
-           
-                int i=st.executeUpdate(q);
-              
             
-   }
-        catch(Exception e){
-        System.out.print(e);
-        e.printStackTrace();
-        }
+   
 
 try{ 
             Connection connection = DriverManager.getConnection(
@@ -60,7 +52,13 @@ try{
              ResultSet resultSet3 = statement.executeQuery("select * from users where  destination='"+s2+"'");
             if(resultSet3.next()==true)
                          {
+                
+                String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
+           
+                st.executeUpdate(q);
+              
                out.println("CAB BOOKED SUCCESSFULLY");
+               
                        } else
                                {
                 out.println("NOT BOOKED");
