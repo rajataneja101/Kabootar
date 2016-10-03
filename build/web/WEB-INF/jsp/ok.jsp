@@ -47,13 +47,31 @@ try{
             ResultSet resultSet2 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s1+"'");
             resultSet2.next();
             String s2=resultSet2.getString(1);
+            ResultSet resultSet3 = statement.executeQuery("select  CABID from cabdrivers,users where cabdrivers.source ='"+s2+"'");
+            resultSet3.next();
+            String s3=resultSet3.getString(1);
+            ResultSet resultSet4 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s3+"'");
+            resultSet4.next();
+            String s4=resultSet4.getString(1);
+            out.print(s1);
+            out.print(s2);
+            out.print(s3);
+            out.print(s4);
             if(s2.equals(c))
                          {
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
                 statement.executeUpdate(q);
                out.println( "<b><font size=5>"+"Cab Booked successfully "+"</font></b>");     
-                       } else
+                       }
+            else if(s4.equals(c))
+                               {
+                String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
+           
+                statement.executeUpdate(q);
+               out.println( "<b><font size=5>"+"Cab Booked successfully "+"</font></b>");   
+            }
+               else 
                                {
                out.println( "<b><font size=5>"+"Not booked "+"</font></b>");     
             }
