@@ -44,27 +44,22 @@ try{
             ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers,users where cabdrivers.source='"+b+"'") ; 
             resultset1.next();
             String s1=resultset1.getString(1);
-            out.print(s1);
             ResultSet resultSet2 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s1+"'");
             resultSet2.next();
             String s2=resultSet2.getString(1);
-            out.print(s2);
-            out.print(c);
             if(s2.equals(c))
                          {
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
                 statement.executeUpdate(q);
-              
-               out.println("CAB BOOKED SUCCESSFULLY");
-               
+               out.println( "<b><font size=5>"+"Cab Booked successfully "+"</font></b>");     
                        } else
                                {
-                out.println("NOT BOOKED");
+               out.println( "<b><font size=5>"+"Not booked "+"</font></b>");     
             }
                   }catch(Exception e)
                   {
-                       out.println(" ");
+                       out.println("NOT BOOKED");
                   }                             
             %>
             
