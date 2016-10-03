@@ -47,7 +47,7 @@ body
        <p>         </p>
 SOURCE:
 
-<select name="s" onchange="" >
+<select name="s" >
 <option>A</option>
 <option>B</option>
 <option>C</option>
@@ -61,7 +61,7 @@ SOURCE:
 <p>    </p> 
  DESTINATION:
 
-<select name="d" onchange="">
+<select name="d" >
 <option>A</option>
 <option>B</option>
 <option>C</option>

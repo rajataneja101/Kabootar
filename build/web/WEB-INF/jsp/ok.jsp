@@ -24,15 +24,9 @@
 
    String c= request.getParameter("d");
    String d= request.getParameter("u");
-   
-
-%>
-
-<%
 
          Class.forName("oracle.jdbc.driver.OracleDriver");
-           Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
-           Statement st=con.createStatement();
+           
            
             
    
@@ -42,30 +36,30 @@ try{
                 "jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
 
             Statement statement = connection.createStatement() ;
-            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers,users where cabdrivers.source='"+b+"'") ; 
-            resultset1.next();
-            String s1=resultset1.getString(1);
-           
-            ResultSet resultSet2 = statement.executeQuery("select destination from cabdrivers where CABID ='"+s1+"'");
-            resultSet2.next();
-            String s2=resultSet2.getString(1);
-             ResultSet resultSet3 = statement.executeQuery("select * from users where  destination='"+s2+"'");
-            if(resultSet3.next()==true)
-                         {
+            ResultSet resultset1 = statement.executeQuery("select source from cabdrivers where cabdrivers.source='"+b+"'") ;
+          
+ boolean x=(resultset1.next());
+                                    
+           ResultSet resultset2 = statement.executeQuery("select destination from cabdrivers where cabdrivers.destination='"+c+"'") ;
+          boolean y=(resultset2.next());
+         
+                   if((x==true) && (y==true))
+                         {    
+           String q;
                 
-                String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
+                q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
-                st.executeUpdate(q);
+                statement.executeUpdate(q);
               
-               out.println("CAB BOOKED SUCCESSFULLY");
-               
+               out.println( "<b><font size=5>"+"Cab successfully Registered "+"</font></b>"); 
+                                           
                        } else
                                {
-                out.println("NOT BOOKED");
+                 out.println( "<b><font size=5>"+"Unsuccessful "+"</font></b>"); 
             }
                   }catch(Exception e)
                   {
-                       out.println("NOT BOOKED");
+                       out.println(e);
                   }                             
             %>
             
