@@ -23,7 +23,7 @@
    String b= request.getParameter("s");
 
    String c= request.getParameter("d");
-
+   String d= request.getParameter("u");
    
 
 %>
@@ -34,7 +34,7 @@ try{
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
            Statement st=con.createStatement();
            
-                String q="insert into users values("+"'"+b+"','"+c+"'"+")";
+                String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
                 int i=st.executeUpdate(q);
               
