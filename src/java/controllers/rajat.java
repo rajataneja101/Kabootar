@@ -23,9 +23,9 @@ public String news(ModelMap map) {
 public String teams(ModelMap map) {
         return "ok";
 }
-@RequestMapping("/posts")
+@RequestMapping("/okcab")
 public String posts(ModelMap map) {
-        return "posts";
+        return "okcab";
 }
 
 @RequestMapping("/contact")
