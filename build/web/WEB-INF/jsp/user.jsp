@@ -79,15 +79,6 @@ SOURCE:
 </div>
 
    </form>
-<!--
-<form:select path="country" items="${countryList}" />
-<select id="country" name="country">
-   <option value="US">United Stated</option>
-   <option value="CHINA">China</option>
-   <option value="SG">Singapore</option>
-   <option value="MY">Malaysia</option>
-</select>
-<table border="1" style="font-family:Georgia, Garamond, Serif;color:blue;font-style:italic;">
--->
+
 </body>
 </html>
