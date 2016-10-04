@@ -10,7 +10,7 @@ public String index(ModelMap map) {
         return "index";
 }
 @RequestMapping("/user")
-public String events(ModelMap map) {
+public String users(ModelMap map) {
         return "user";
 }
 @RequestMapping("/cab")
@@ -24,16 +24,16 @@ public String viewusers(ModelMap map) {
 
 
 @RequestMapping("/ok")
-public String teams(ModelMap map) {
+public String ok(ModelMap map) {
         return "ok";
 }
 @RequestMapping("/okcab")
-public String posts(ModelMap map) {
+public String okcab(ModelMap map) {
         return "okcab";
 }
 
 @RequestMapping("/viewcab")
-public String contact(ModelMap map) {
+public String viewcab(ModelMap map) {
         return "viewcab";
 }
    
