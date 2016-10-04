@@ -66,8 +66,6 @@ body
        
            
      try{       
-   
-
 
             Connection connection = DriverManager.getConnection(
                 "jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
@@ -81,20 +79,8 @@ body
             resultSet2.next();
             String s2=resultSet2.getString(1);
       
-            try{
-            ResultSet resultset2 = statement.executeQuery("select CABID from cabdrivers where source='"+s2+"'") ; 
-            resultset2.next();
-            String s3=resultset2.getString(1);
-         
-            ResultSet resultSet3 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s3+"'");
-            resultSet3.next();
-            String s4=resultSet3.getString(1);
-     
-                       }catch(Exception e)
-                                                             {
-                         
-                       }
-            finally{
+           
+           
             if(s2.equals(c))
                          {
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
@@ -103,24 +89,43 @@ body
                out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
                    
                        }
-           
                else 
                                {
-               out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");     
-            }
+                 ResultSet resultset2 = statement.executeQuery("select CABID from cabdrivers where source='"+s2+"'") ; 
+            resultset2.next();
+            String s3=resultset2.getString(1);
+         out.print(s3);
+            ResultSet resultSet3 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s3+"'");
+            resultSet3.next();
+            String s4=resultSet3.getString(1); 
+                 
+            
+               if(s4.equals(c)){
+                           String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
+           
+                statement.executeUpdate(q);
+               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
+                      }
+                       else{
+                 out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");  
                        }
-                   }catch(Exception e)
+                       }
+                       }
+                   catch(Exception e)
                                                      {
-                       out.print("<b><font size=5 font color=white>"+"Not booked "+"</font></b>");
+                       out.print("<b><font size=5 font color=white>"+"Not booked"+"</font></b>");
                    }
                                               
             %>
             
 <form action="user">
- <button class="button" style="margin-left:auto;margin-right:auto;display:block" name="submit" id="button"  value="Submit" >SUBMIT</button>
+ <button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top: 2%" name="submit" id="button"  value="Submit" >BOOK MORE</button>
 </div>
 </form>
-
+<form action="index">
+ <button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top: 2%" name="submit" id="button"  value="Submit" >HOME</button>
+</div>
+</form>
 
 </body>
 </html>

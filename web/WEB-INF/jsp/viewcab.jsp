@@ -2,6 +2,20 @@
 
 <% Class.forName("oracle.jdbc.driver.OracleDriver"); %>
 <style>
+    
+    .button {
+    background-color: #ff3300; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+      height:10%;
+    width:10%;
+    }
 table {
     border-collapse: collapse;
     width: 40%;
@@ -58,16 +72,18 @@ body
                 <TH>ID</TH>
                 <TH>Source</TH>
                 <TH>Destination</TH>
-                <TH>Intermediate Stops</TH>
             </TR>
             <% while(resultset.next()){ %>
             <TR>
                 <TD> <%= resultset.getString(1) %></td>
                 <TD> <%= resultset.getString(2) %></TD>
                 <TD> <%= resultset.getString(3) %></TD>
-                <TD> <%= resultset.getString(4) %></TD>
             </TR>
             <% } %>
         </TABLE>
     </BODY>
+    <form action="index">
+ <button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top: 2%" name="submit" id="button"  value="Submit" >HOME</button>
+</div>
+</form>
 </HTML>

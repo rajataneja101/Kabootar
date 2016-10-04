@@ -66,7 +66,7 @@ try{
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
            Statement st=con.createStatement();
                 
-                String q="insert into cabdrivers values("+"'"+d+"','"+b+"','"+c+"','"+p+"')";
+                String q="insert into cabdrivers values("+"'"+d+"','"+b+"','"+c+"')";
            
                 int i=st.executeUpdate(q);
               
@@ -88,7 +88,10 @@ try{
  <button class="button" style="margin-left:auto;margin-right:auto;display:block" name="submit" id="button"  value="Submit" >SUBMIT</button>
 </div>
 </form>
-
+<form action="index">
+ <button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top: 2%" name="submit" id="button"  value="Submit" >HOME</button>
+</div>
+</form>
 
 </body>
 </html>

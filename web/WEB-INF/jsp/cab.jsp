@@ -80,17 +80,7 @@ SOURCE:
 <option>E</option>
 </select>
  
- <p>    </p> 
- INTERMEDIATE POINTS:
-
-<select name="intermediate" onchange="">
-<option>A</option>
-<option>B</option>
-<option>C</option>
-<option>D</option>
-<option>E</option>
-</select>
-</div>
+ 
       </tr>
       
      </table>
@@ -100,7 +90,10 @@ SOURCE:
  <button class="button" name="submit" id="button"  value="Submit" >SUBMIT!</button>
 </div>
 
-   </form>
 
+   </form>
+<form action="index">
+ <button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top: 2%" name="submit" id="button"  value="Submit" >HOME</button>
+</form>
 </body>
 </html>
