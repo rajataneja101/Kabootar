@@ -17,6 +17,10 @@ public String events(ModelMap map) {
 public String news(ModelMap map) {
         return "cab";
 }
+@RequestMapping("/viewusers")
+public String viewusers(ModelMap map) {
+        return "viewusers";
+}
 
 
 @RequestMapping("/ok")
@@ -32,7 +36,11 @@ public String posts(ModelMap map) {
 public String contact(ModelMap map) {
         return "viewcab";
 }
-
+   
+    @RequestMapping("/cancel")
+public String cancel(ModelMap map) {
+        return "cancel";
+}
 
 }
 

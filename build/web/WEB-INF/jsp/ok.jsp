@@ -60,7 +60,7 @@ body
 %>
 
 <%
-
+try{
          Class.forName("oracle.jdbc.driver.OracleDriver");
        
            
@@ -115,7 +115,10 @@ statement.executeQuery(sql2);
                  out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");  
                        }
                        }
-                       
+               }catch(Exception e)
+               {
+                   out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");
+               }                                         
                  
                                               
             %>

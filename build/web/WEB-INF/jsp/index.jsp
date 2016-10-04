@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
 .button {
     background-color: #ff3300; /* Green */
@@ -30,13 +31,13 @@ body
     background-repeat: no-repeat;
     /* Scale the background image to be as large as possible */
     background-size: cover;
-      font-family:Georgia, Garamond, Serif;
+      font-family:Georgia,Garamond,serif;
 }
 
 </style>
 </head>
 <body>
-
+<center><h1 style="margin: 0 auto;color: whitesmoke">WELCOME TO INTRA-CITY PACKAGE DELIVERY SERVICE</h1></center>
 
 
 <button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:15%;margin-bottom:0%" onClick="window.location='/WebApplication6/cab';">Cab Driver</button> 
