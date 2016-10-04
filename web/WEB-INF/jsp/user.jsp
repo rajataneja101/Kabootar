@@ -5,7 +5,7 @@
     html, body {height:100%;}
 html {display:table; width:100%;}
 .button{
-    background-color: #4CAF50; /* Green */
+    background-color: #ff3300; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -36,11 +36,11 @@ body
 </style>
 <body>
 
-<center> <h1><font color="#4CAF50">Enter the details:</font></h1></center>
+<center> <h1><font color="#ff3300">Enter the details:</font></h1></center>
     
-<table align="center" style="font-family:Georgia, Garamond, Serif;color:blue;font-style:italic;font-size: 40px">
+<table align="center" style="font-family:Georgia, Garamond, Serif;color:#ff3300;font-style:italic;font-size: 40px">
       <tr>
-      <div style="color:#ffffff">
+      <div style="color:#ff3300; font-size: 20px" >
       <form method="post" action="ok" >
        UID:
        <input type="text" name="u">

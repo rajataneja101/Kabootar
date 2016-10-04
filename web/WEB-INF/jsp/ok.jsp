@@ -7,7 +7,7 @@
 </head>
 <style>
     .button {
-    background-color: #4CAF50; /* Green */
+    background-color: #ff3300; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -16,7 +16,7 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-      height:20%;
+    height:20%;
     width:20%;
     
 }
@@ -109,8 +109,8 @@ try{
             %>
             
 <form action="user">
-    <button class="button" name="submit" id="button"  value="Submit" >AGAIN!</button>
-
+ <button class="button" style="margin-left:auto;margin-right:auto;display:block" name="submit" id="button"  value="Submit" >SUBMIT</button>
+</div>
 </form>
 
 
