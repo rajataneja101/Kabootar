@@ -24,7 +24,7 @@
 body 
 {
      
-    background-image: url("/WebApplication6/slider.jpg");
+   
   
     background-attachment: fixed;
   
@@ -87,15 +87,15 @@ try{
 statement.executeQuery(sql);
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
                 statement.executeUpdate(q);
-               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
-                   
+               out.println( "<b><font size=5 font color=#cc6600>"+"Cab Booked successfully"+"</font></b>"+"<br>");
+                   out.println("<b><font size=5 font color=#cc6600>"+"Cab "+s1+" Will come to take the package and drop the package "+"</font></b>");
                        }
                else 
                                {
                  ResultSet resultset2 = statement.executeQuery("select CABID from cabdrivers where source='"+s2+"'") ; 
             resultset2.next();
             String s3=resultset2.getString(1);
-         out.print(s3);
+      
             ResultSet resultSet3 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s3+"'");
             resultSet3.next();
             String s4=resultSet3.getString(1); 
@@ -109,7 +109,9 @@ statement.executeQuery(sql);
 statement.executeQuery(sql);
 statement.executeQuery(sql2);
                 statement.executeUpdate(q);
-               out.println( "<b><font size=5 font color=#cc6600>"+"Cab Booked successfully "+"</font></b>");
+               out.println( "<b><font size=5 font color=#cc6600>"+"Cab Booked successfully "+"</font></b>"+"<br>");
+              
+                   out.println("<b><font size=5 font color=#cc6600>"+"Cab "+s1+" Will come to take the package and "+s3+" drop the package "+"</font></b>");
                       }
                        else{
                  out.println( "<b><font size=5 font color=#cc6600>"+"Not booked "+"</font></b>");  

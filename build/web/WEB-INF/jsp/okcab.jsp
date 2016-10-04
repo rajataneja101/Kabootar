@@ -68,7 +68,7 @@ try{
            
                 int i=st.executeUpdate(q);
               
-                out.println( "<b><font size=5 font color=#cc6600>"+"Cab registered successfully "+"</font></b>");       
+                out.println( "<b><font size=5 font color=#cc6600>"+"YOU WILL BE NOTIFIED FOR THE PACKAGE SOON "+"</font></b>");       
    }
         catch(Exception e){
         System.out.print(e);
