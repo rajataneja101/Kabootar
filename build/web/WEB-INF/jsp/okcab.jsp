@@ -7,7 +7,7 @@
 </head>
 <style>
     .button {
-    background-color: #ff3300; /* Green */
+    background-color: #cc6600; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -23,8 +23,7 @@
 body 
 {
      
-    background-image: url("/WebApplication6/slider.jpg");
- 
+    
     background-attachment: fixed;
   
     background-position: center;
@@ -69,7 +68,7 @@ try{
            
                 int i=st.executeUpdate(q);
               
-                out.println( "<b><font size=5 font color=white>"+"Cab registered successfully "+"</font></b>");       
+                out.println( "<b><font size=5 font color=#cc6600>"+"Cab registered successfully "+"</font></b>");       
    }
         catch(Exception e){
         System.out.print(e);

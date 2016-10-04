@@ -10,7 +10,7 @@
     html, body {height:100%;}
 html {display:table; width:100%;}
 .button{
-    background-color: #ff3300; /* Green */
+    background-color: #cc6600; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -25,8 +25,6 @@ html {display:table; width:100%;}
 }
 body 
 {
-     
-    background-image: url("/WebApplication6/slider.jpg"); 
     background-attachment: fixed;
   
     background-position: center;
@@ -45,11 +43,11 @@ body
 
         
     
-<center> <h1><font color="#ff3300">Enter the details:</font></h1></center>
+<center> <h1><font color="#cc6600">Enter the details:</font></h1></center>
     
 <table align="center" style="font-family:Georgia, Garamond, Serif;color:#ff3300;font-style:italic;font-size: 40px">
       <tr>
-      <div style="color:#ff3300;font-size: 20px">
+      <div style="color:#cc6600;font-size: 20px">
       <form method="post" action="okcab" >
        CAB ID:
        <input type="text" name="cabid">

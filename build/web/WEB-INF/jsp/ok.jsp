@@ -7,7 +7,7 @@
 </head>
 <style>
     .button {
-    background-color: #ff3300; /* Green */
+    background-color: #cc6600; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -109,15 +109,15 @@ statement.executeQuery(sql);
 statement.executeQuery(sql);
 statement.executeQuery(sql2);
                 statement.executeUpdate(q);
-               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
+               out.println( "<b><font size=5 font color=#cc6600>"+"Cab Booked successfully "+"</font></b>");
                       }
                        else{
-                 out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");  
+                 out.println( "<b><font size=5 font color=#cc6600>"+"Not booked "+"</font></b>");  
                        }
                        }
                }catch(Exception e)
                {
-                   out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");
+                   out.println( "<b><font size=5 font color=#cc6600>"+"Not booked "+"</font></b>");
                }                                         
                  
                                               
