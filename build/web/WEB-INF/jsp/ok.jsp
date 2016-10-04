@@ -64,17 +64,16 @@ body
          Class.forName("oracle.jdbc.driver.OracleDriver");
        
            
-     try{       
-
+     
             Connection connection = DriverManager.getConnection(
                 "jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
 
             Statement statement = connection.createStatement() ;
-            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers where source='"+b+"' and available='YES'") ; 
+            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers where source='"+b+"' and AVAILABLE='YES'") ; 
             resultset1.next();
             String s1=resultset1.getString(1);
          
-            ResultSet resultSet2 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s1+"' and available='YES'");
+            ResultSet resultSet2 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s1+"' and AVAILABLE='YES'");
             resultSet2.next();
             String s2=resultSet2.getString(1);
       
@@ -82,7 +81,10 @@ body
            
             if(s2.equals(c))
                          {
-                
+                String sql = "UPDATE cabdrivers SET available='No' WHERE cabid='"+s1+"'";
+ 
+
+statement.executeQuery(sql);
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
                 statement.executeUpdate(q);
                out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
@@ -101,7 +103,11 @@ body
             
                if(s4.equals(c)){
                            String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
-           
+            String sql = "UPDATE cabdrivers SET available='No' WHERE cabid='"+s3+"'";
+ 
+              String sql2 = "UPDATE cabdrivers SET available='No' WHERE cabid='"+s1+"'";
+statement.executeQuery(sql);
+statement.executeQuery(sql2);
                 statement.executeUpdate(q);
                out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
                       }
@@ -109,11 +115,8 @@ body
                  out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");  
                        }
                        }
-                       }
-                   catch(Exception e)
-                                                     {
-                       out.print("<b><font size=5 font color=white>"+"Not booked"+"</font></b>");
-                   }
+                       
+                 
                                               
             %>
             
