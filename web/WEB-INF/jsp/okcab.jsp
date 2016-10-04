@@ -16,8 +16,8 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-      height:20%;
-    width:20%;
+      height:10%;
+    width:10%;
     
 }
 body 
@@ -33,6 +33,8 @@ body
     background-repeat: no-repeat;
     /* Scale the background image to be as large as possible */
     background-size: cover;
+      font-family:Georgia, Garamond, Serif;
+     font-colour: white;
 }
 </style>
 <body>
@@ -63,12 +65,12 @@ try{
          Class.forName("oracle.jdbc.driver.OracleDriver");
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
            Statement st=con.createStatement();
-           
+                
                 String q="insert into cabdrivers values("+"'"+d+"','"+b+"','"+c+"','"+p+"')";
            
                 int i=st.executeUpdate(q);
               
-                out.println( "<b><font size=5>"+"Cab successfully Registered "+"</font></b>");      
+                out.println( "<b><font size=5 font color=white>"+"Cab registered successfully "+"</font></b>");       
    }
         catch(Exception e){
         System.out.print(e);
@@ -83,7 +85,8 @@ try{
 <br />
 
 <form action="cab">
-<input type="submit" value="Click Here to insert another record">
+ <button class="button" style="margin-left:auto;margin-right:auto;display:block" name="submit" id="button"  value="Submit" >SUBMIT</button>
+</div>
 </form>
 
 

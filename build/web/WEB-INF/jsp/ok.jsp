@@ -16,8 +16,9 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    height:20%;
-    width:20%;
+    height:10%;
+    width:10%;
+    font-family:Georgia, Garamond, Serif;
     
 }
 body 
@@ -33,6 +34,7 @@ body
     background-repeat: no-repeat;
     /* Scale the background image to be as large as possible */
     background-size: cover;
+    font-family:Georgia, Garamond, Serif;
 }
 </style>
 <body>
@@ -63,49 +65,55 @@ body
          Class.forName("oracle.jdbc.driver.OracleDriver");
        
            
-            
+     try{       
    
 
-try{ 
+
             Connection connection = DriverManager.getConnection(
                 "jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
 
             Statement statement = connection.createStatement() ;
-            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers,users where cabdrivers.source='"+b+"'") ; 
+            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers where source='"+b+"'") ; 
             resultset1.next();
             String s1=resultset1.getString(1);
+         
             ResultSet resultSet2 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s1+"'");
             resultSet2.next();
             String s2=resultSet2.getString(1);
-            ResultSet resultSet3 = statement.executeQuery("select  CABID from cabdrivers,users where cabdrivers.source ='"+s2+"'");
+      
+            try{
+            ResultSet resultset2 = statement.executeQuery("select CABID from cabdrivers where source='"+s2+"'") ; 
+            resultset2.next();
+            String s3=resultset2.getString(1);
+         
+            ResultSet resultSet3 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s3+"'");
             resultSet3.next();
-            String s3=resultSet3.getString(1);
-            ResultSet resultSet4 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s3+"'");
-            resultSet4.next();
-            String s4=resultSet4.getString(1);
-           
+            String s4=resultSet3.getString(1);
+     
+                       }catch(Exception e)
+                                                             {
+                         
+                       }
+            finally{
             if(s2.equals(c))
                          {
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
                 statement.executeUpdate(q);
-               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");     
+               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
+                   
                        }
-            else if(s4.equals(c))
-                               {
-                String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
            
-                statement.executeUpdate(q);
-               out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");   
-            }
                else 
                                {
                out.println( "<b><font size=5 font color=white>"+"Not booked "+"</font></b>");     
             }
-                  }catch(Exception e)
-                  {
-                       out.println("NOT BOOKED");
-                  }                             
+                       }
+                   }catch(Exception e)
+                                                     {
+                       out.print("<b><font size=5 font color=white>"+"Not booked "+"</font></b>");
+                   }
+                                              
             %>
             
 <form action="user">

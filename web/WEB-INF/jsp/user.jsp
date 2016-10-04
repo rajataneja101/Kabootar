@@ -32,6 +32,7 @@ body
     /* Scale the background image to be as large as possible */
     background-size: cover;
     display:table-cell; text-align:center; vertical-align:middle;
+    font-family:Georgia, Garamond, Serif;
 }
 </style>
 <body>
@@ -40,7 +41,7 @@ body
     
 <table align="center" style="font-family:Georgia, Garamond, Serif;color:#ff3300;font-style:italic;font-size: 40px">
       <tr>
-      <div style="color:#ff3300; font-size: 20px" >
+      <div style="color:#ff3300; font-size: 20px; font-style: bold" >
       <form method="post" action="ok" >
        UID:
        <input type="text" name="u">

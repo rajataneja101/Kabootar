@@ -37,6 +37,7 @@ body
     /* Scale the background image to be as large as possible */
     background-size: cover;
     display:table-cell; text-align:center; vertical-align:middle;
+      font-family:Georgia, Garamond, Serif;
 }
 </style>
 <body>

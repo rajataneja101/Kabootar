@@ -18,7 +18,7 @@ th, td {
 tr:nth-child(even){background-color: #f2f2f2}
 tr:nth-child(odd){background-color: #f2f2f2}
 th {
-    background-color: #4CAF50;
+    background-color: #ff3300;
     color: white;
 }
 body 
@@ -34,6 +34,7 @@ body
     background-repeat: no-repeat;
     /* Scale the background image to be as large as possible */
     background-size: cover;
+    font-family:Georgia, Garamond, Serif;
 }
 </style>
 <HTML>

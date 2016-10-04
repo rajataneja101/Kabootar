@@ -12,7 +12,7 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-      height:20%;
+    height:20%;
     width:20%;
     
 }
@@ -31,6 +31,7 @@ body
     background-repeat: no-repeat;
     /* Scale the background image to be as large as possible */
     background-size: cover;
+      font-family:Georgia, Garamond, Serif;
 }
 
 </style>
@@ -39,9 +40,9 @@ body
 
 
 
-<button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%" onClick="window.location='/WebApplication6/cab';">Cab Driver</button> 
+<button class="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:15%;margin-bottom:0%" onClick="window.location='/WebApplication6/cab';">Cab Driver</button> 
 <button class="button button2" style="margin-left:auto;margin-right:auto;display:block;margin-top:2%;margin-bottom:0%" onClick="window.location='/WebApplication6/user';">User   </button>
-<button class="button " style="margin-left:auto;margin-right:auto;display:block;margin-top:2%;margin-bottom:0%" onClick="window.location='/WebApplication6/viewcab';">View Cabs</button> 
+<button class="button " style="margin-left:auto;margin-right:auto;display:block;margin-top:2%;margin-bottom:0%" onClick="window.location='/WebApplication6/viewcab';">View Cabs Available</button> 
 
 </body>
 </html>
