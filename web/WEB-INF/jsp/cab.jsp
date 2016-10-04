@@ -26,9 +26,7 @@ html {display:table; width:100%;}
 body 
 {
      
-    background-image: url("/WebApplication6/slider.jpg");
-     min-height: 500px;
-    
+    background-image: url("/WebApplication6/slider.jpg"); 
     background-attachment: fixed;
   
     background-position: center;

@@ -25,8 +25,7 @@ body
 {
      
     background-image: url("/WebApplication6/slider.jpg");
-     min-height: 500px;
-    
+  
     background-attachment: fixed;
   
     background-position: center;
@@ -71,11 +70,11 @@ body
                 "jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
 
             Statement statement = connection.createStatement() ;
-            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers where source='"+b+"'") ; 
+            ResultSet resultset1 = statement.executeQuery("select CABID from cabdrivers where source='"+b+"' and available='YES'") ; 
             resultset1.next();
             String s1=resultset1.getString(1);
          
-            ResultSet resultSet2 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s1+"'");
+            ResultSet resultSet2 = statement.executeQuery("select  destination from cabdrivers where CABID ='"+s1+"' and available='YES'");
             resultSet2.next();
             String s2=resultSet2.getString(1);
       
@@ -83,8 +82,8 @@ body
            
             if(s2.equals(c))
                          {
+                
                 String q="insert into users values("+"'"+d+"','"+b+"','"+c+"')";
-           
                 statement.executeUpdate(q);
                out.println( "<b><font size=5 font color=white>"+"Cab Booked successfully "+"</font></b>");
                    

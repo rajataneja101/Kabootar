@@ -24,8 +24,7 @@ body
 {
      
     background-image: url("/WebApplication6/slider.jpg");
-     min-height: 500px;
-    
+ 
     background-attachment: fixed;
   
     background-position: center;
@@ -66,7 +65,7 @@ try{
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "hackathon", "hackathon");
            Statement st=con.createStatement();
                 
-                String q="insert into cabdrivers values("+"'"+d+"','"+b+"','"+c+"')";
+                String q="insert into cabdrivers values("+"'"+d+"','"+b+"','"+c+"','YES'"+")";
            
                 int i=st.executeUpdate(q);
               

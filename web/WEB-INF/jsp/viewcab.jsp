@@ -39,8 +39,7 @@ body
 {
      
     background-image: url("/WebApplication6/slider.jpg");
-     min-height: 500px;
-    
+  
     background-attachment: fixed;
   
     background-position: center;
@@ -72,12 +71,14 @@ body
                 <TH>ID</TH>
                 <TH>Source</TH>
                 <TH>Destination</TH>
+                <TH>Availability</TH>
             </TR>
             <% while(resultset.next()){ %>
             <TR>
                 <TD> <%= resultset.getString(1) %></td>
                 <TD> <%= resultset.getString(2) %></TD>
                 <TD> <%= resultset.getString(3) %></TD>
+                  <TD> <%= resultset.getString(4) %></TD>
             </TR>
             <% } %>
         </TABLE>

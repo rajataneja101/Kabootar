@@ -22,7 +22,6 @@ body
 {
      
     background-image: url("/WebApplication6/slider.jpg");
-     min-height: 500px;
     
     background-attachment: fixed;
   
